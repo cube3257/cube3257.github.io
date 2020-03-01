@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Ewert&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen and (max-device-width: 500px)" href="mobile.css" />
+  <link rel="stylesheet" type="text/css" media="screen and (min-device-width: 501px)" href="main.css" />
+  <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+  <link rel="shortcut icon" href="images/cube.png">
+  <title>Rubik's Cube</title>
+</head>
+
+<body>
+
+  <p id="desktop">For now go to Desktop.</p>
+  <div class="main">
+    <div class="container">
+      <h1>Rubik's cube</h1>
+
+      <div class="row">
+        <div class="col-6">
+          <div>
+            <button class="button" onclick="scrambleClicked()">Scramble</button>
+            <button class="button" onclick="resetClicked()">Reset</button>
+          </div>
+
+          <div id="algorithm-container">
+            <div>
+              <!--<input type="checkbox" name="algorithm" value="show">-->
+              <h6>Algorithm</h6>
+            </div>
+            <h6 id="algorithm">–</h6>
+
+          </div>
+
+          <div id="solve-buttons">
+            <div>
+              <button class="button" onclick="lClicked()">L</button>
+              <button class="button" onclick="fClicked()">F</button>
+              <button class="button" onclick="rClicked()">R</button>
+              <button class="button" onclick="bClicked()">B</button>
+              <button class="button" onclick="uClicked()">U</button>
+              <button class="button" onclick="dClicked()">D</button>
+            </div>
+            <div>
+              <button class="button" onclick="lReverseClicked()">L'</button>
+              <button class="button" onclick="fReverseClicked()">F'</button>
+              <button class="button" onclick="rReverseClicked()">R'</button>
+              <button class="button" onclick="bReverseClicked()">B'</button>
+              <button class="button" onclick="uReverseClicked()">U'</button>
+              <button class="button" onclick="dReverseClicked()">D'</button>
+            </div>
+            <div>
+              <button class="button" onclick="l2Clicked()">L2</button>
+              <button class="button" onclick="f2Clicked()">F2</button>
+              <button class="button" onclick="r2Clicked()">R2</button>
+              <button class="button" onclick="b2Clicked()">B2</button>
+              <button class="button" onclick="u2Clicked()">U2</button>
+              <button class="button" onclick="d2Clicked()">D2</button>
+            </div>
+            <div>
+              <button class="button_rotate" onclick="rotateLeftClicked()"><img src="images/rotate-right.png"
+                  alt=""></button>
+              <button class="button_rotate" onclick="rotateRightClicked()"><img src="images/rotate-left.png"
+                  alt=""></button>
+              <button class="button_rotate" onclick="rotateUpClicked()"><img src="images/rotate-up.png" alt=""></button>
+              <button class="button_rotate" onclick="rotateDownClicked()"><img src="images/rotate-down.png"
+                  alt=""></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 test1">
+          <div class="row-of-sides">
+            <div class="side">
+
+            </div>
+            <div id="up-side" class="side">
+              <div id="up-row-up" class="row-of-stickers">
+                <div id="u1" class="rhombus-up"></div>
+                <div id="u2" class="rhombus-up"></div>
+                <div id="u3" class="rhombus-up"></div>
+              </div>
+              <div id="up-row-middle" class="row-of-stickers">
+                <div id="u4" class="rhombus-up"></div>
+                <div id="u5" class="rhombus-up"></div>
+                <div id="u6" class="rhombus-up"></div>
+              </div>
+              <div id="up-row-down" class="row-of-stickers">
+                <div id="u7" class=" rhombus-up"></div>
+                <div id="u8" class="rhombus-up"></div>
+                <div id="u9" class="rhombus-up"></div>
+              </div>
+
+            </div>
+            <div class="side">
+
+            </div>
+          </div>
+          <div class="row-of-sides">
+            <div id="left-side" class="side backstage">
+              <div class="row-of-stickers">
+                <div id="l1" class="sticker"></div>
+                <div id="l2" class="sticker"></div>
+                <div id="l3" class="sticker"></div>
+              </div>
+              <div class="row-of-stickers">
+                <div id="l4" class="sticker"></div>
+                <div id="l5" class="sticker"></div>
+                <div id="l6" class="sticker"></div>
+              </div>
+              <div class="row-of-stickers">
+                <div id="l7" class="sticker"></div>
+                <div id="l8" class="sticker"></div>
+                <div id="l9" class="sticker"></div>
+              </div>
+              <div class="cover-area">
+              </div>
+            </div>
+            <div id="front-side" class="side">
+              <div class="row-of-stickers">
+                <div id="f1" class="sticker"></div>
+                <div id="f2" class="sticker"></div>
+                <div id="f3" class="sticker"></div>
+              </div>
+              <div class="row-of-stickers">
+                <div id="f4" class="sticker"></div>
+                <div id="f5" class="sticker"></div>
+                <div id="f6" class="sticker"></div>
+              </div>
+              <div class="row-of-stickers">
+                <div id="f7" class="sticker"></div>
+                <div id="f8" class="sticker"></div>
+                <div id="f9" class="sticker"></div>
+              </div>
+
+            </div>
+            <div id="right-side" class="side">
+              <div id="right-row-up" class="row-of-stickers">
+                <div id="r1" class="rhombus-right"></div>
+                <div id="r2" class="rhombus-right"></div>
+                <div id="r3" class="rhombus-right"></div>
+              </div>
+              <div id="right-row-middle" class="row-of-stickers">
+                <div id="r4" class="rhombus-right"></div>
+                <div id="r5" class="rhombus-right"></div>
+                <div id="r6" class="rhombus-right"></div>
+              </div>
+              <div id="right-row-down" class="row-of-stickers">
+                <div id="r7" class="rhombus-right"></div>
+                <div id="r8" class="rhombus-right"></div>
+                <div id="r9" class="rhombus-right"></div>
+              </div>
+
+            </div>
+
+            <div id="back-side" class="side">
+              <div class="row-of-stickers">
+                <div id="b1" class="sticker"></div>
+                <div id="b2" class="sticker"></div>
+                <div id="b3" class="sticker"></div>
+              </div>
+              <div class="row-of-stickers">
+                <div id="b4" class="sticker"></div>
+                <div id="b5" class="sticker"></div>
+                <div id="b6" class="sticker"></div>
+              </div>
+              <div class="row-of-stickers">
+                <div id="b7" class="sticker"></div>
+                <div id="b8" class="sticker"></div>
+                <div id="b9" class="sticker"></div>
+              </div>
+              <div class="cover-area">
+              </div>
+
+            </div>
+          </div>
+
+          <div class="row-of-sides">
+            <div class="side">
+
+            </div>
+            <div id="down-side" class="side backstage">
+              <div class="row-of-stickers">
+                <div id="d1" class="sticker"></div>
+                <div id="d2" class="sticker"></div>
+                <div id="d3" class="sticker"></div>
+              </div>
+              <div class="row-of-stickers">
+                <div id="d4" class="sticker"></div>
+                <div id="d5" class="sticker"></div>
+                <div id="d6" class="sticker"></div>
+              </div>
+              <div class="row-of-stickers">
+                <div id="d7" class="sticker"></div>
+                <div id="d8" class="sticker"></div>
+                <div id="d9" class="sticker"></div>
+              </div>
+              <div class="cover-area">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"
+      integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"></script>
+    <script type='text/javascript' src='script.js'></script>
+</body>
+
+</html>
