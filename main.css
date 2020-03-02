@@ -146,18 +146,11 @@ h1 {
   /* display: none; */
 }
 
-/* #back-side {
-  display: none;
+
+#checkbox_area {
+  margin-top: 20px;
 }
 
-#down-side {
+.isHidden {
   display: none;
-}
-
-#left-side {
-  display: none;
-}
-*/
-#dummy-side {
- display: none;
-} 
+ } 

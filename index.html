@@ -74,6 +74,10 @@
               <button class="button" onclick="rotateRight2dClicked()"><img src="images/rotate-right2d.png"
                   alt=""></button>
             </div>
+            <div id="checkbox_area">
+              <input id="checkbox" type="checkbox" name="checkbox" value="show" onclick="checkboxClicked()" checked>
+              <label for="sides">Show hidden sides</label>
+            </div>
           </div>
         </div>
 
@@ -105,7 +109,7 @@
             </div>
           </div>
           <div class="row-of-sides">
-            <div id="dummy-side" class="side">
+            <div id="dummy-side" class="side isHidden">
 
             </div>
             <div id="left-side" class="side backstage">

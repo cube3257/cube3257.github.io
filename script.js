@@ -4,6 +4,8 @@ var allRotations = ["L", "F", "R", "B", "U", "D", "L'", "F'", "R'", "B'", "U'", 
 
 var algorithm = document.getElementById("algorithm");
 
+
+
 var l1 = document.getElementById("l1")
 var l2 = document.getElementById("l2")
 var l3 = document.getElementById("l3")
@@ -1055,6 +1057,7 @@ function scrambleClicked() {
 }
 
 function resetClicked() {
+
     algorithm.textContent = "–";
 
     l1.style.backgroundColor = "#FFA101";
@@ -1116,5 +1119,29 @@ function resetClicked() {
     d7.style.backgroundColor = "#F0FF19";
     d8.style.backgroundColor = "#F0FF19";
     d9.style.backgroundColor = "#F0FF19";
+
+}
+
+
+function checkboxClicked() {
+    var checkBox = document.getElementById("checkbox");
+    var back = document.getElementById("back-side");
+    var down = document.getElementById("down-side");
+    var left = document.getElementById("left-side");
+    var dummy = document.getElementById("dummy-side");
+
+    back.classList.toggle('isHidden');
+    down.classList.toggle('isHidden');
+    left.classList.toggle('isHidden');
+    dummy.classList.toggle('isHidden');
+
+    // if (checkBox.checked == true) {
+    //     back.classList.toggle('isHidden');
+    //     down.classList.toggle('isHidden');
+    //     left.classList.toggle('isHidden');
+    //     dummy.classList.toggle('isHidden');
+    // } else {
+    //     console.log("false1");
+    // }
 
 }
