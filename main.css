@@ -130,22 +130,34 @@ h1 {
 }
 
 #solve-buttons .button {
+  padding: 2px;
   width: 40px;
   height: 40px;
   margin-top: 5px;
 }
 
-#solve-buttons .button_rotate {
-  width: 62px;
-  height: 62px;
-  margin-top: 5px;
-}
-
 #solve-buttons img {
-  width: 46px;
-  height: 46px;
+  width: 36px;
+  height: 36px;
+
 }
 
 .backstage {
   /* display: none; */
 }
+
+/* #back-side {
+  display: none;
+}
+
+#down-side {
+  display: none;
+}
+
+#left-side {
+  display: none;
+}
+*/
+#dummy-side {
+ display: none;
+} 

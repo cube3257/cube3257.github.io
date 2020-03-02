@@ -907,6 +907,80 @@ function rotateDownClicked() {
     u2.style.backgroundColor = b8color;
 }
 
+function rotateLeft2dClicked() {
+    fReverseClicked();
+    bClicked();
+
+    var l2color = getColor(l2);
+    var l5color = getColor(l5);
+    var l8color = getColor(l8);
+
+    var u4color = getColor(u4);
+    var u5color = getColor(u5);
+    var u6color = getColor(u6);
+
+    var r2color = getColor(r2);
+    var r5color = getColor(r5);
+    var r8color = getColor(r8);
+
+    var d4color = getColor(d4);
+    var d5color = getColor(d5);
+    var d6color = getColor(d6);
+
+    l2.style.backgroundColor = u6color;
+    l5.style.backgroundColor = u5color;
+    l8.style.backgroundColor = u4color;
+
+    u4.style.backgroundColor = r2color;
+    u5.style.backgroundColor = r5color;
+    u6.style.backgroundColor = r8color;
+
+    r2.style.backgroundColor = d6color;
+    r5.style.backgroundColor = d5color;
+    r8.style.backgroundColor = d4color;
+
+    d4.style.backgroundColor = l2color;
+    d5.style.backgroundColor = l5color;
+    d6.style.backgroundColor = l8color;
+}
+
+function rotateRight2dClicked() {
+    fClicked();
+    bReverseClicked();
+
+    var l2color = getColor(l2);
+    var l5color = getColor(l5);
+    var l8color = getColor(l8);
+
+    var u4color = getColor(u4);
+    var u5color = getColor(u5);
+    var u6color = getColor(u6);
+
+    var r2color = getColor(r2);
+    var r5color = getColor(r5);
+    var r8color = getColor(r8);
+
+    var d4color = getColor(d4);
+    var d5color = getColor(d5);
+    var d6color = getColor(d6);
+
+    u6.style.backgroundColor = l2color;
+    u5.style.backgroundColor = l5color;
+    u4.style.backgroundColor = l8color;
+
+    r2.style.backgroundColor = u4color;
+    r5.style.backgroundColor = u5color;
+    r8.style.backgroundColor = u6color;
+
+    d6.style.backgroundColor = r2color;
+    d5.style.backgroundColor = r5color;
+    d4.style.backgroundColor = r8color;
+
+    l2.style.backgroundColor = d4color;
+    l5.style.backgroundColor = d5color;
+    l8.style.backgroundColor = d6color;
+}
+
 function scrambleClicked() {
     resetClicked();
 

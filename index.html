@@ -65,12 +65,13 @@
               <button class="button" onclick="d2Clicked()">D2</button>
             </div>
             <div>
-              <button class="button_rotate" onclick="rotateLeftClicked()"><img src="images/rotate-right.png"
+              <button class="button" onclick="rotateLeftClicked()"><img src="images/rotate-right.png" alt=""></button>
+              <button class="button" onclick="rotateRightClicked()"><img src="images/rotate-left.png" alt=""></button>
+              <button class="button" onclick="rotateUpClicked()"><img src="images/rotate-up.png" alt=""></button>
+              <button class="button" onclick="rotateDownClicked()"><img src="images/rotate-down.png" alt=""></button>
+              <button class="button" onclick="rotateLeft2dClicked()"><img src="images/rotate-left2d.png"
                   alt=""></button>
-              <button class="button_rotate" onclick="rotateRightClicked()"><img src="images/rotate-left.png"
-                  alt=""></button>
-              <button class="button_rotate" onclick="rotateUpClicked()"><img src="images/rotate-up.png" alt=""></button>
-              <button class="button_rotate" onclick="rotateDownClicked()"><img src="images/rotate-down.png"
+              <button class="button" onclick="rotateRight2dClicked()"><img src="images/rotate-right2d.png"
                   alt=""></button>
             </div>
           </div>
@@ -104,6 +105,9 @@
             </div>
           </div>
           <div class="row-of-sides">
+            <div id="dummy-side" class="side">
+
+            </div>
             <div id="left-side" class="side backstage">
               <div class="row-of-stickers">
                 <div id="l1" class="sticker"></div>
