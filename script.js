@@ -4,6 +4,7 @@ var allRotations = ["L", "F", "R", "B", "U", "D", "L'", "F'", "R'", "B'", "U'", 
 
 var algorithm = document.getElementById("algorithm");
 
+var isPlaying = false;
 
 
 var l1 = document.getElementById("l1")
@@ -139,6 +140,7 @@ function lClicked() {
     b9.style.backgroundColor = d1color;
 
 
+    checkResult();
 }
 
 function lReverseClicked() {
@@ -191,6 +193,7 @@ function lReverseClicked() {
     d7.style.backgroundColor = b3color;
     d4.style.backgroundColor = b6color;
     d1.style.backgroundColor = b9color;
+    checkResult();
 }
 
 function uClicked() {
@@ -244,6 +247,7 @@ function uClicked() {
     b1.style.backgroundColor = l1color;
     b2.style.backgroundColor = l2color;
     b3.style.backgroundColor = l3color;
+    checkResult();
 }
 
 function uReverseClicked() {
@@ -297,6 +301,7 @@ function uReverseClicked() {
     l1.style.backgroundColor = b1color;
     l2.style.backgroundColor = b2color;
     l3.style.backgroundColor = b3color;
+    checkResult();
 }
 
 function fClicked() {
@@ -350,6 +355,7 @@ function fClicked() {
     d1.style.backgroundColor = r7color;
     d2.style.backgroundColor = r4color;
     d3.style.backgroundColor = r1color;
+    checkResult();
 }
 
 
@@ -404,6 +410,7 @@ function fReverseClicked() {
     r7.style.backgroundColor = d1color;
     r4.style.backgroundColor = d2color;
     r1.style.backgroundColor = d3color;
+    checkResult();
 }
 
 
@@ -458,6 +465,7 @@ function rClicked() {
     b1.style.backgroundColor = u9color;
     b4.style.backgroundColor = u6color;
     b7.style.backgroundColor = u3color;
+    checkResult();
 }
 
 
@@ -513,6 +521,7 @@ function rReverseClicked() {
     u9.style.backgroundColor = b1color;
     u6.style.backgroundColor = b4color;
     u3.style.backgroundColor = b7color;
+    checkResult();
 }
 
 
@@ -567,6 +576,7 @@ function bClicked() {
     l1.style.backgroundColor = u3color;
     l4.style.backgroundColor = u2color;
     l7.style.backgroundColor = u1color;
+    checkResult();
 }
 
 
@@ -621,6 +631,7 @@ function bReverseClicked() {
     u3.style.backgroundColor = l1color;
     u2.style.backgroundColor = l4color;
     u1.style.backgroundColor = l7color;
+    checkResult();
 }
 
 
@@ -675,6 +686,7 @@ function dClicked() {
     l7.style.backgroundColor = b7color;
     l8.style.backgroundColor = b8color;
     l9.style.backgroundColor = b9color;
+    checkResult();
 }
 
 
@@ -728,6 +740,7 @@ function dReverseClicked() {
     b7.style.backgroundColor = l7color;
     b8.style.backgroundColor = l8color;
     b9.style.backgroundColor = l9color;
+    checkResult();
 }
 
 function l2Clicked() {
@@ -986,11 +999,17 @@ function rotateRight2dClicked() {
 function scrambleClicked() {
     resetClicked();
 
+    isPlaying = true;
     var myAlgorithm = [];
 
+    var rotation = "X"
+
     for (var i = 1; i < 31; i++) {
-        var rotation = allRotations[Math.floor(Math.random() * allRotations.length)];
+        const candidateRotations = allRotations.filter(word => word[0] != [rotation[0]]);
+        rotation = candidateRotations[Math.floor(Math.random() * candidateRotations.length)];
         myAlgorithm.push(rotation);
+
+
         switch (rotation) {
             case "L":
                 lClicked();
@@ -1052,11 +1071,11 @@ function scrambleClicked() {
 
 
     }
-    console.log(myAlgorithm.join("  "));
     algorithm.textContent = myAlgorithm.join("  ")
 }
 
 function resetClicked() {
+    isPlaying = false;
 
     algorithm.textContent = "–";
 
@@ -1124,7 +1143,7 @@ function resetClicked() {
 
 
 function checkboxClicked() {
-    var checkBox = document.getElementById("checkbox");
+
     var back = document.getElementById("back-side");
     var down = document.getElementById("down-side");
     var left = document.getElementById("left-side");
@@ -1135,13 +1154,149 @@ function checkboxClicked() {
     left.classList.toggle('isHidden');
     dummy.classList.toggle('isHidden');
 
-    // if (checkBox.checked == true) {
-    //     back.classList.toggle('isHidden');
-    //     down.classList.toggle('isHidden');
-    //     left.classList.toggle('isHidden');
-    //     dummy.classList.toggle('isHidden');
-    // } else {
-    //     console.log("false1");
-    // }
+}
 
+function checkResult() {
+    if (!isPlaying) {
+        return;
+    }
+
+    // check upper side
+    var u1color = getColor(u1);
+    var u2color = getColor(u2);
+    var u3color = getColor(u3);
+    var u4color = getColor(u4);
+    var u5color = getColor(u5);
+    var u6color = getColor(u6);
+    var u7color = getColor(u7);
+    var u8color = getColor(u8);
+    var u9color = getColor(u9);
+    if (u5color == u1color
+        && u5color == u2color
+        && u5color == u3color
+        && u5color == u4color
+        && u5color == u6color
+        && u5color == u7color
+        && u5color == u8color
+        && u5color == u9color) {
+    } else {
+        return;
+
+    }
+
+    // check left side
+    var l1color = getColor(l1);
+    var l2color = getColor(l2);
+    var l3color = getColor(l3);
+    var l4color = getColor(l4);
+    var l5color = getColor(l5);
+    var l6color = getColor(l6);
+    var l7color = getColor(l7);
+    var l8color = getColor(l8);
+    var l9color = getColor(l9);
+    if (l5color == l1color
+        && l5color == l2color
+        && l5color == l3color
+        && l5color == l4color
+        && l5color == l6color
+        && l5color == l7color
+        && l5color == l8color
+        && l5color == l9color) {
+    } else {
+        return;
+
+    }
+
+    // check front side
+    var f1color = getColor(f1);
+    var f2color = getColor(f2);
+    var f3color = getColor(f3);
+    var f4color = getColor(f4);
+    var f5color = getColor(f5);
+    var f6color = getColor(f6);
+    var f7color = getColor(f7);
+    var f8color = getColor(f8);
+    var f9color = getColor(f9);
+    if (f5color == f1color
+        && f5color == f2color
+        && f5color == f3color
+        && f5color == f4color
+        && f5color == f6color
+        && f5color == f7color
+        && f5color == f8color
+        && f5color == f9color) {
+    } else {
+        return;
+
+    }
+
+    // check right side
+    var r1color = getColor(r1);
+    var r2color = getColor(r2);
+    var r3color = getColor(r3);
+    var r4color = getColor(r4);
+    var r5color = getColor(r5);
+    var r6color = getColor(r6);
+    var r7color = getColor(r7);
+    var r8color = getColor(r8);
+    var r9color = getColor(r9);
+    if (r5color == r1color
+        && r5color == r2color
+        && r5color == r3color
+        && r5color == r4color
+        && r5color == r6color
+        && r5color == r7color
+        && r5color == r8color
+        && r5color == r9color) {
+    } else {
+        return;
+
+    }
+
+    // check back side
+    var b1color = getColor(b1);
+    var b2color = getColor(b2);
+    var b3color = getColor(b3);
+    var b4color = getColor(b4);
+    var b5color = getColor(b5);
+    var b6color = getColor(b6);
+    var b7color = getColor(b7);
+    var b8color = getColor(b8);
+    var b9color = getColor(b9);
+    if (b5color == b1color
+        && b5color == b2color
+        && b5color == b3color
+        && b5color == b4color
+        && b5color == b6color
+        && b5color == b7color
+        && b5color == b8color
+        && b5color == b9color) {
+    } else {
+        return;
+
+    }
+
+    // check down side
+    var d1color = getColor(d1);
+    var d2color = getColor(d2);
+    var d3color = getColor(d3);
+    var d4color = getColor(d4);
+    var d5color = getColor(d5);
+    var d6color = getColor(d6);
+    var d7color = getColor(d7);
+    var d8color = getColor(d8);
+    var d9color = getColor(d9);
+    if (d5color == d1color
+        && d5color == d2color
+        && d5color == d3color
+        && d5color == d4color
+        && d5color == d6color
+        && d5color == d7color
+        && d5color == d8color
+        && d5color == d9color) {
+        window.alert("Congratulations! You did it!")
+    } else {
+        return;
+
+    }
 }
