@@ -140,6 +140,7 @@ function lClicked() {
     b9.style.backgroundColor = d1color;
 
 
+
     checkResult();
 }
 
@@ -1157,9 +1158,16 @@ function checkboxClicked() {
 }
 
 function checkResult() {
+    setTimeout(myFunction, 300);
+
+}
+
+function myFunction() {
+
     if (!isPlaying) {
         return;
     }
+
 
     // check upper side
     var u1color = getColor(u1);
@@ -1294,7 +1302,9 @@ function checkResult() {
         && d5color == d7color
         && d5color == d8color
         && d5color == d9color) {
+        isPlaying = false;
         window.alert("Congratulations! You did it!")
+
     } else {
         return;
 
