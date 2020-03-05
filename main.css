@@ -167,21 +167,28 @@ h4 {
 
  #btn1 {
   background-image: url("images/rotate-right.png");
-  background-size: cover; 
+  background-size: 90% auto; 
+  background-repeat: no-repeat;
+  background-position: center;
             width: 40px; 
             height: 40px;
+
  }
 
  #btn2 {
   background-image: url("images/rotate-left.png");
-  background-size: cover; 
+  background-size: 90% auto; 
+  background-repeat: no-repeat;
+  background-position: center;
             width: 40px; 
             height: 40px;
 }
 
 #btn3 {
   background-image: url("images/rotate-up.png");
-  background-size: cover; 
+  background-size: 90% auto; 
+  background-repeat: no-repeat;
+  background-position: center;
             width: 40px; 
             height: 40px;
 
@@ -189,30 +196,67 @@ h4 {
 
 #btn4 {
   background-image: url("images/rotate-down.png");
-  background-size: cover; 
+  background-size: 90% auto; 
+  background-repeat: no-repeat;
+  background-position: center;
             width: 40px; 
             height: 40px;
 }
 
 #btn5 {
   background-image: url("images/rotate-left2d.png");
-  background-size: cover; 
+  background-size: 90% auto; 
+  background-repeat: no-repeat;
+  background-position: center;
             width: 40px; 
             height: 40px;
 }
 
 #btn6 {
   background-image: url("images/rotate-right2d.png");
-  background-size: cover; 
+  background-size: 90% auto; 
+  background-repeat: no-repeat;
+  background-position: center;
             width: 40px; 
             height: 40px;
-}
-
-#secret-buttons {
-  margin-top: 10px;
 }
 
 #secret-buttons button {
   margin-top: 5px;
 }
 
+button {
+  display: inline-block;
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  background: #0069ed;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button:hover,
+button:focus {
+  background: #0053ba;
+}
+
+button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+
+button:active {
+  transform: scale(0.99);
+}
+
+.secret-button {
+  height: 30px;
+  width: 128px;
+}

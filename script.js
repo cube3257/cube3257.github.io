@@ -7,8 +7,8 @@ var algorithm = document.getElementById("algorithm");
 var isPlaying = false;
 
 var isSecretHidden = true;
-var secretNumber = 0;
-var secretMaxNumber = 15;
+var secretNumber = 1;
+var secretMaxNumber = 14;
 
 
 var l1 = document.getElementById("l1")
