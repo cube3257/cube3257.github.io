@@ -1,35 +1,25 @@
 html {
   position: relative;
   min-height: 100%;
+  background-color: #edf8fe;
 }
 /*http://rubics-cube.se/*/
 body {
-  background-image: url("images/background.jpg");
-  background-color: #cccccc;
+  background-color: #edf8fe;
   width: 100%;
   background-size: cover;
 }
 
-.col-6 {
-  width: 96px;
-}
-#desktop {
-  display: none;
-}
-
-
-
 h4 {
   margin-top: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
 
 #algorithm-container {
-  margin-top: 0px;
-  height: 80px;
+  height: 70px;
   width: 100%;
   padding: 10px;
   text-align: center;
@@ -39,10 +29,22 @@ h4 {
   margin-left: 4px;
 }
 
-.row-of-sides {
-  display: flex;
+#cube-container {
+  padding: 5px;
+  border: 1px solid red;
+  width: 440px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
+.row-of-sides {
+  display: inline-flex;
+}
+
+.low-side {
+  height: 80px;
+  width: 120px;
+}
 .side {
   width: 120px;
 }
@@ -56,7 +58,7 @@ h4 {
 .sticker {
   width: 40px;
   height: 40px;
-  border: 1px solid gray;
+  border: 0.5px solid gray;
 }
 
 .rhombus-up {
@@ -80,25 +82,31 @@ h4 {
 
 
 #up-row-up {
-  transform: skewX(-45deg) scaleY(0.6) translate(100px, 68px);
+  transform: skewX(-45deg) scaleY(0.6) translate(67px, 11px);
 }
 #up-row-middle {
-  transform: skewX(-45deg) scaleY(0.6) translate(60px, 41px);
+  transform: skewX(-45deg) scaleY(0.6) translate(27px, -16px);
 }
 #up-row-down {
-  transform: skewX(-45deg) scaleY(0.6) translate(20px, 14px);
+  transform: skewX(-45deg) scaleY(0.6) translate(-13px, -43px);
 }
+
+/* (106px, 78px);
+  (66px, 51px);
+  (26px, 24px);
+*/
 
 
 #right-row-up {
-  transform: skewY(-45deg) scaleX(0.6) translate(-41px, -60px);
+  transform: skewY(-45deg) scaleX(0.60) translate(-40px, -60px);
 }
 #right-row-middle {
-  transform: skewY(-45deg) scaleX(0.6) translate(-41px, -60px);
+  transform: skewY(-45deg) scaleX(0.60) translate(-40px, -60px);
 }
 #right-row-down {
-  transform: skewY(-45deg) scaleX(0.6) translate(-41px, -60px);
+  transform: skewY(-45deg) scaleX(0.60) translate(-40px, -60px);
 }
+
 
 
 #up-side > div > div {
@@ -121,12 +129,12 @@ h4 {
 }
 
 #back-side {
-  transform: translate(-49px, -71px);
+  transform: translate(-48px, -72px);
 }
 
 #all-buttons {
   margin: 10px auto;
-  margin-top: 50px;
+  margin-top: 10px;
   width: 268px;
   height: 220px;
 }
