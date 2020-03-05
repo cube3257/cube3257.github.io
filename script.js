@@ -7,6 +7,8 @@ var algorithm = document.getElementById("algorithm");
 var isPlaying = false;
 
 var isSecretHidden = true;
+var secretNumber = 0;
+var secretMaxNumber = 15;
 
 
 var l1 = document.getElementById("l1")
@@ -997,6 +999,14 @@ function rotateRight2dClicked() {
     l2.style.backgroundColor = d4color;
     l5.style.backgroundColor = d5color;
     l8.style.backgroundColor = d6color;
+    if (secretNumber > secretMaxNumber) {
+        if (isSecretHidden) {
+            showHiddenButtons();
+            isSecretHidden = false;
+        }
+    } else {
+        secretNumber++;
+    }
 }
 
 function scrambleClicked() {
