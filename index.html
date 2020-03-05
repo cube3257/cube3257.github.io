@@ -18,70 +18,20 @@
 
 <body>
 
-  <p id="desktop">For now go to Desktop.</p>
   <div class="main">
     <div class="container">
-      <h1>Rubik's cube</h1>
+
 
       <div class="row">
-        <div class="col-6">
-          <div>
-            <button class="button" onclick="scrambleClicked()">Scramble</button>
-            <button class="button" onclick="resetClicked()">Reset</button>
-          </div>
-
+        <div class="col-md-6">
+          <h4>Rubik's Cube</h4>
           <div id="algorithm-container">
-            <div>
-              <!--<input type="checkbox" name="algorithm" value="show">-->
-              <h6>Algorithm</h6>
-            </div>
+
+            <h6>Algorithm</h6>
             <h6 id="algorithm">–</h6>
 
           </div>
 
-          <div id="solve-buttons">
-            <div>
-              <button class="button" onclick="lClicked()">L</button>
-              <button class="button" onclick="fClicked()">F</button>
-              <button class="button" onclick="rClicked()">R</button>
-              <button class="button" onclick="bClicked()">B</button>
-              <button class="button" onclick="uClicked()">U</button>
-              <button class="button" onclick="dClicked()">D</button>
-            </div>
-            <div>
-              <button class="button" onclick="lReverseClicked()">L'</button>
-              <button class="button" onclick="fReverseClicked()">F'</button>
-              <button class="button" onclick="rReverseClicked()">R'</button>
-              <button class="button" onclick="bReverseClicked()">B'</button>
-              <button class="button" onclick="uReverseClicked()">U'</button>
-              <button class="button" onclick="dReverseClicked()">D'</button>
-            </div>
-            <div>
-              <button class="button" onclick="l2Clicked()">L2</button>
-              <button class="button" onclick="f2Clicked()">F2</button>
-              <button class="button" onclick="r2Clicked()">R2</button>
-              <button class="button" onclick="b2Clicked()">B2</button>
-              <button class="button" onclick="u2Clicked()">U2</button>
-              <button class="button" onclick="d2Clicked()">D2</button>
-            </div>
-            <div>
-              <button class="button" onclick="rotateLeftClicked()"><img src="images/rotate-right.png" alt=""></button>
-              <button class="button" onclick="rotateRightClicked()"><img src="images/rotate-left.png" alt=""></button>
-              <button class="button" onclick="rotateUpClicked()"><img src="images/rotate-up.png" alt=""></button>
-              <button class="button" onclick="rotateDownClicked()"><img src="images/rotate-down.png" alt=""></button>
-              <button class="button" onclick="rotateLeft2dClicked()"><img src="images/rotate-left2d.png"
-                  alt=""></button>
-              <button class="button" onclick="rotateRight2dClicked()"><img src="images/rotate-right2d.png"
-                  alt=""></button>
-            </div>
-            <div id="checkbox_area">
-              <input id="checkbox" type="checkbox" name="checkbox" value="show" onclick="checkboxClicked()">
-              <label for="sides">Show hidden sides</label>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6">
           <div class="row-of-sides">
             <div class="side">
 
@@ -214,6 +164,87 @@
               </div>
             </div>
           </div>
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-6">
+          <div id="all-buttons">
+            <div>
+              <button class="long_btn1" onclick="scrambleClicked()">Scramble</button>
+              <button class="long_btn2" onclick="resetClicked()">Reset</button>
+            </div>
+
+
+            <div>
+              <button class="button" onclick="lClicked()">L</button>
+              <button class="button" onclick="fClicked()">F</button>
+              <button class="button" onclick="rClicked()">R</button>
+              <button class="button" onclick="bClicked()">B</button>
+              <button class="button" onclick="uClicked()">U</button>
+              <button class="button" onclick="dClicked()">D</button>
+            </div>
+            <div>
+              <button class="button" onclick="lReverseClicked()">L'</button>
+              <button class="button" onclick="fReverseClicked()">F'</button>
+              <button class="button" onclick="rReverseClicked()">R'</button>
+              <button class="button" onclick="bReverseClicked()">B'</button>
+              <button class="button" onclick="uReverseClicked()">U'</button>
+              <button class="button" onclick="dReverseClicked()">D'</button>
+            </div>
+            <div>
+              <button class="button" onclick="l2Clicked()">L2</button>
+              <button class="button" onclick="f2Clicked()">F2</button>
+              <button class="button" onclick="r2Clicked()">R2</button>
+              <button class="button" onclick="b2Clicked()">B2</button>
+              <button class="button" onclick="u2Clicked()">U2</button>
+              <button class="button" onclick="d2Clicked()">D2</button>
+            </div>
+            <div>
+              <button id="btn1" class="button" onclick="rotateLeftClicked()"></button>
+              <button id="btn2" class="button" onclick="rotateRightClicked()"></button>
+              <button id="btn3" class="button" onclick="rotateUpClicked()"></button>
+              <button id="btn4" class="button" onclick="rotateDownClicked()"></button>
+              <button id="btn5" class="button" onclick="rotateLeft2dClicked()"></button>
+              <button id="btn6" class="button" onclick="rotateRight2dClicked()"></button>
+            </div>
+
+            <div id="secret-buttons" class="isHidden">
+              <div>
+                <button onclick="secret1Clicked()">URU'R'</button>
+                <button onclick="secret2Clicked()">RUR'U'</button>
+              </div>
+
+              <div>
+                <button onclick="secret3Clicked()">U'L'ULUFU'F'</button>
+                <button onclick="secret4Clicked()">URU'R'U'F'UF</button>
+              </div>
+              <div>
+                <button onclick="secret5Clicked()">FRUR'U'F</button>
+                <button onclick="secret6Clicked()">U'RUUR'U'RU'R'</button>
+              </div>
+
+              <div>
+                <button onclick="secret7Clicked()">U'L'URU'LUR'</button>
+                <button onclick="secret8Clicked()">URU'L'UR'U'L</button>
+              </div>
+
+            </div>
+
+
+
+            <div id="checkbox_area">
+              <input id="checkbox" type="checkbox" name="checkbox" value="show" onclick="checkboxClicked()">
+              <label for="sides">Show hidden sides</label>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>

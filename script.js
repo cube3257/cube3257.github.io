@@ -6,6 +6,8 @@ var algorithm = document.getElementById("algorithm");
 
 var isPlaying = false;
 
+var isSecretHidden = true;
+
 
 var l1 = document.getElementById("l1")
 var l2 = document.getElementById("l2")
@@ -1158,11 +1160,6 @@ function checkboxClicked() {
 }
 
 function checkResult() {
-    setTimeout(myFunction, 300);
-
-}
-
-function myFunction() {
 
     if (!isPlaying) {
         return;
@@ -1303,10 +1300,107 @@ function myFunction() {
         && d5color == d8color
         && d5color == d9color) {
         isPlaying = false;
-        window.alert("Congratulations! You did it!")
+        setTimeout(showWin, 300);
 
     } else {
         return;
 
     }
 }
+
+function showWin() {
+    window.alert("Congratulations! You did it!")
+    if (isSecretHidden) {
+        isSecretHidden = false
+        showHiddenButtons();
+
+    }
+}
+
+function showHiddenButtons() {
+    var secretButtons = document.getElementById("secret-buttons");
+    secretButtons.classList.toggle('isHidden');
+
+}
+
+function secret1Clicked() {
+    uClicked();
+    rClicked();
+    uReverseClicked();
+    rReverseClicked();
+}
+
+function secret2Clicked() {
+    rClicked();
+    uClicked();
+    rReverseClicked();
+    uReverseClicked();
+}
+
+
+function secret3Clicked() {
+    uReverseClicked();
+    lReverseClicked();
+    uClicked();
+    lClicked();
+    uClicked();
+    fClicked();
+    uReverseClicked();
+    fReverseClicked();
+}
+
+function secret4Clicked() {
+    uClicked();
+    rClicked();
+    uReverseClicked();
+    rReverseClicked();
+    uReverseClicked();
+    fReverseClicked();
+    uClicked();
+    fClicked();
+}
+
+function secret5Clicked() {
+    fClicked();
+    rClicked();
+    uClicked();
+    rReverseClicked();
+    uReverseClicked();
+    fReverseClicked();
+}
+
+function secret6Clicked() {
+    uReverseClicked();
+    rClicked();
+    uClicked();
+    uClicked();
+    rReverseClicked();
+    uReverseClicked();
+    rClicked();
+    uReverseClicked();
+    rReverseClicked();
+}
+
+function secret7Clicked() {
+    uReverseClicked();
+    lReverseClicked();
+    uClicked();
+    rClicked();
+    uReverseClicked();
+    lClicked();
+    uClicked();
+    rReverseClicked();
+}
+
+function secret8Clicked() {
+    uClicked();
+    rClicked();
+    uReverseClicked();
+    lReverseClicked();
+    uClicked();
+    rReverseClicked();
+    uReverseClicked();
+    lClicked();
+}
+
+

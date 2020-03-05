@@ -2,10 +2,210 @@ html {
   position: relative;
   min-height: 100%;
 }
+/*http://rubics-cube.se/*/
+body {
+  background-image: url("images/background.jpg");
+  background-color: #cccccc;
+  width: 100%;
+  background-size: cover;
+}
 
-
-.container {
+.col-6 {
+  width: 96px;
+}
+#desktop {
   display: none;
+}
 
+
+
+h4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#algorithm-container {
+  margin-top: 0px;
+  height: 80px;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+#algorithm-container h6 {
+  margin-left: 4px;
+}
+
+.row-of-sides {
+  display: flex;
+}
+
+.side {
+  width: 120px;
+}
+
+.row-of-stickers {
+  display: flex;
+}
+
+
+
+.sticker {
+  width: 40px;
+  height: 40px;
+  border: 1px solid gray;
+}
+
+.rhombus-up {
+  width: 40px;
+  height: 40px;
+  border: 1px solid gray;
+}
+
+.rhombus-right {
+  width: 40px;
+  height: 40px;
+  border: 1px solid gray;
+  /*-webkit-transform: skewY(-45deg) scaleX(0.70711);*/
+  /*transform: translate(350px,0);
+    -webkit-transform: translate(350px,0);  Chrome & Safari 
+    -o-transform: translate(350px,0); Opera 
+    -moz-transform: translate(350px,0);
+
+  transform: skewY(-45deg) scaleX(0.70711);*/
+}
+
+
+#up-row-up {
+  transform: skewX(-45deg) scaleY(0.6) translate(100px, 68px);
+}
+#up-row-middle {
+  transform: skewX(-45deg) scaleY(0.6) translate(60px, 41px);
+}
+#up-row-down {
+  transform: skewX(-45deg) scaleY(0.6) translate(20px, 14px);
+}
+
+
+#right-row-up {
+  transform: skewY(-45deg) scaleX(0.6) translate(-41px, -60px);
+}
+#right-row-middle {
+  transform: skewY(-45deg) scaleX(0.6) translate(-41px, -60px);
+}
+#right-row-down {
+  transform: skewY(-45deg) scaleX(0.6) translate(-41px, -60px);
+}
+
+
+#up-side > div > div {
+  background-color: white;
+}
+#left-side > div > div {
+  background-color: #FFA101;
+}
+#front-side > div > div {
+  background-color: #4AD256;
+}
+#right-side > div > div {
+  background-color: #F52002;
+}
+#back-side > div > div {
+  background-color: #095EC3;
+}
+#down-side > div > div {
+  background-color: #F0FF19;
+}
+
+#back-side {
+  transform: translate(-49px, -71px);
+}
+
+#all-buttons {
+  margin: 10px auto;
+  margin-top: 50px;
+  width: 268px;
+  height: 220px;
+}
+
+
+.long_btn1 {
+  height: 32px;
+  width: 128px;
+  margin-bottom: 10px;
+}
+
+.long_btn2 {
+  height: 32px;
+  width: 128px;
+  margin-bottom: 10px;
+}
+
+.button {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+#checkbox_area {
+  margin-top: 20px;
+}
+
+.isHidden {
+  display: none;
+ } 
+
+ #btn1 {
+  background-image: url("images/rotate-right.png");
+  background-size: cover; 
+            width: 40px; 
+            height: 40px;
+ }
+
+ #btn2 {
+  background-image: url("images/rotate-left.png");
+  background-size: cover; 
+            width: 40px; 
+            height: 40px;
+}
+
+#btn3 {
+  background-image: url("images/rotate-up.png");
+  background-size: cover; 
+            width: 40px; 
+            height: 40px;
+
+}
+
+#btn4 {
+  background-image: url("images/rotate-down.png");
+  background-size: cover; 
+            width: 40px; 
+            height: 40px;
+}
+
+#btn5 {
+  background-image: url("images/rotate-left2d.png");
+  background-size: cover; 
+            width: 40px; 
+            height: 40px;
+}
+
+#btn6 {
+  background-image: url("images/rotate-right2d.png");
+  background-size: cover; 
+            width: 40px; 
+            height: 40px;
+}
+
+#secret-buttons {
+  margin-top: 10px;
+}
+
+#secret-buttons button {
+  margin-top: 5px;
 }
 

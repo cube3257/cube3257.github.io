@@ -7,31 +7,32 @@ body {
   background-image: url("images/background.jpg");
   background-color: #cccccc;
   width: 100%;
-  height: 100%;
   background-size: cover;
 }
 
+.col-6 {
+  width: 96px;
+}
 #desktop {
   display: none;
 }
 
 
 
-h1 {
-  margin-top: 60px;
-  margin-bottom: 20px;
+h4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 #algorithm-container {
-  margin-top: 20px;
-  height: 100px;
+  margin-top: 0px;
+  height: 80px;
   width: 100%;
   padding: 10px;
-}
-
-#algorithm-container > div {
-  display: flex;
-  
+  text-align: center;
 }
 
 #algorithm-container h6 {
@@ -123,29 +124,31 @@ h1 {
   transform: translate(-49px, -71px);
 }
 
-#solve-buttons {
+#all-buttons {
   margin: 10px auto;
-  width: 340px;
-  height: 210px;
+  margin-top: 50px;
+  width: 268px;
+  height: 220px;
 }
 
-#solve-buttons .button {
-  padding: 2px;
+
+.long_btn1 {
+  height: 32px;
+  width: 128px;
+  margin-bottom: 10px;
+}
+
+.long_btn2 {
+  height: 32px;
+  width: 128px;
+  margin-bottom: 10px;
+}
+
+.button {
   width: 40px;
   height: 40px;
-  margin-top: 5px;
+  margin-bottom: 5px;
 }
-
-#solve-buttons img {
-  width: 36px;
-  height: 36px;
-
-}
-
-.backstage {
-  /* display: none; */
-}
-
 
 #checkbox_area {
   margin-top: 20px;
@@ -154,3 +157,55 @@ h1 {
 .isHidden {
   display: none;
  } 
+
+ #btn1 {
+  background-image: url("images/rotate-right.png");
+  background-size: cover; 
+            width: 40px; 
+            height: 40px;
+ }
+
+ #btn2 {
+  background-image: url("images/rotate-left.png");
+  background-size: cover; 
+            width: 40px; 
+            height: 40px;
+}
+
+#btn3 {
+  background-image: url("images/rotate-up.png");
+  background-size: cover; 
+            width: 40px; 
+            height: 40px;
+
+}
+
+#btn4 {
+  background-image: url("images/rotate-down.png");
+  background-size: cover; 
+            width: 40px; 
+            height: 40px;
+}
+
+#btn5 {
+  background-image: url("images/rotate-left2d.png");
+  background-size: cover; 
+            width: 40px; 
+            height: 40px;
+}
+
+#btn6 {
+  background-image: url("images/rotate-right2d.png");
+  background-size: cover; 
+            width: 40px; 
+            height: 40px;
+}
+
+#secret-buttons {
+  margin-top: 10px;
+}
+
+#secret-buttons button {
+  margin-top: 5px;
+}
+
