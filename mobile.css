@@ -39,11 +39,11 @@ h4 {
 }
 
 .low-side {
-  height: 80px;
-  width: 120px;
+  height: 60px;
+  width: 90px;
 }
 .side {
-  width: 120px;
+  width: 90px;
 }
 
 .row-of-stickers {
@@ -53,20 +53,20 @@ h4 {
 
 
 .sticker {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border: 0.5px solid gray;
 }
 
 .rhombus-up {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border: 1px solid gray;
 }
 
 .rhombus-right {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border: 1px solid gray;
   /*-webkit-transform: skewY(-45deg) scaleX(0.70711);*/
   /*transform: translate(350px,0);
@@ -79,6 +79,16 @@ h4 {
 
 
 #up-row-up {
+  transform: skewX(-45deg) scaleY(0.6) translate(51px, 10px);
+}
+#up-row-middle {
+  transform: skewX(-45deg) scaleY(0.6) translate(21px, -10px);
+}
+#up-row-down {
+  transform: skewX(-45deg) scaleY(0.6) translate(-9px, -30px);
+}
+
+/* #up-row-up {
   transform: skewX(-45deg) scaleY(0.6) translate(67px, 11px);
 }
 #up-row-middle {
@@ -86,7 +96,7 @@ h4 {
 }
 #up-row-down {
   transform: skewX(-45deg) scaleY(0.6) translate(-13px, -43px);
-}
+} */
 
 /* (106px, 78px);
   (66px, 51px);
@@ -95,13 +105,13 @@ h4 {
 
 
 #right-row-up {
-  transform: skewY(-45deg) scaleX(0.60) translate(-40px, -60px);
+  transform: skewY(-45deg) scaleX(0.60) translate(-31px, -46px);
 }
 #right-row-middle {
-  transform: skewY(-45deg) scaleX(0.60) translate(-40px, -60px);
+  transform: skewY(-45deg) scaleX(0.60) translate(-31px, -46px);
 }
 #right-row-down {
-  transform: skewY(-45deg) scaleX(0.60) translate(-40px, -60px);
+  transform: skewY(-45deg) scaleX(0.60) translate(-31px, -46px);
 }
 
 
@@ -126,7 +136,7 @@ h4 {
 }
 
 #back-side {
-  transform: translate(-48px, -72px);
+  transform: translate(-37px, -54px);
 }
 
 #all-buttons {
